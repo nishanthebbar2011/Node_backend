@@ -1,7 +1,7 @@
 {
-  "name": "poker_backend",
+  "name": "node_backend",
   "version": "1.0.0",
-  "description": "This is the backend for the Poker-webapp.",
+  "description": "This is the backend for the webapp.",
   "main": "app.js",
   "scripts": {
     "start": "env-cmd -f ./.env nodemon src/app.js"
