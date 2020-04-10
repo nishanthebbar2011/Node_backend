@@ -16,7 +16,7 @@ const auth = async (req, res, next) => {
         req.token = token;
         next();
     } catch(error){
-        res.staus(401).send(({error : "Unable to access the required information."}))
+        res.status(401).send(({error : "Unable to access the required information."}))
     }
 }
 

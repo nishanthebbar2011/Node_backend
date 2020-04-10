@@ -8,16 +8,46 @@ var userSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
+
     password: {
         type: String,
         required: true,
     },
+
     tokens : [
         {
          token:{
              type: String,
              required : true
          }   
+        }
+    ], 
+
+    friends : [
+        {
+            type : mongoose.SchemaTypes.ObjectId, 
+            ref : 'User'
+        }
+    ], 
+
+    pendingRequests : [
+        {
+            type : mongoose.SchemaTypes.ObjectId, 
+            ref : 'User'
+        }
+    ],
+
+    sentRequests : [
+        {
+            type : mongoose.SchemaTypes.ObjectId, 
+            ref : 'User'
+        }
+    ],
+
+    posts : [
+        {
+            type : mongoose.Schema.Types.ObjectId, 
+            ref : 'Post', 
         }
     ]
     
